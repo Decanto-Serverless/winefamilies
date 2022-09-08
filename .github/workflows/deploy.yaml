@@ -15,11 +15,11 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup Golang ${{ env.GOLANG_VERSION }} Environment
+        env:
+					GOPROXY: "https://proxy.golang.org,direct"
         uses: actions/setup-go@v3
         with:
           go-version: ${{ env.GOLANG_VERSION }}
-      	env:
-					GOPROXY: "https://proxy.golang.org,direct"
       - run: go build -o handler main.go
 
       - name: "Run Azure Functions action"
