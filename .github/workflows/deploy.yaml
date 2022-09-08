@@ -19,7 +19,11 @@ jobs:
           go-version-file: "go.mod"
           check-latest: true
           cache: true
-      - run: |
+      - run: go version
+
+      - name: "Build Project"
+        shell: bash
+        run: |
           pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
           go build -o handler main.go
           popd
