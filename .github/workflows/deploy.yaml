@@ -18,7 +18,9 @@ jobs:
         uses: actions/setup-go@v3
         with:
           go-version: ${{ env.GOLANG_VERSION }}
-      - run: go build -o handler main.go
+      - run: |
+          go get
+          go build -o handler main.go
 
       - name: "Run Azure Functions action"
         uses: Azure/functions-action@v1
