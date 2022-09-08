@@ -1,13 +1,13 @@
 SHELL=/bin/sh
 
-build:
+buildWin:
 	GOOS=windows GOARCH=amd64 go build -o handler main.go
 
-buildMac:
+build:
 	go build -o handler main.go
 
-run: buildMac
+run: build
 	func start
 
-deploy: build
+deploy: buildWin
 	func azure functionapp publish winefamilies
