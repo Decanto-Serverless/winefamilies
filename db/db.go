@@ -5,7 +5,8 @@ import (
 	"crypto/tls"
 	"sync"
 
-	"github.com/Gprisco/decanto-winefamily-service/env"
+	"winefamilies/env"
+
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )

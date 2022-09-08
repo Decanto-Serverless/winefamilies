@@ -3,7 +3,8 @@ package services
 import (
 	"context"
 
-	"github.com/Gprisco/decanto-winefamily-service/models"
+	"winefamilies/models"
+
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo/options"

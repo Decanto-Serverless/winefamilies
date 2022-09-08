@@ -1,8 +1,9 @@
 package models
 
 import (
-	"github.com/Gprisco/decanto-winefamily-service/db"
-	"github.com/Gprisco/decanto-winefamily-service/env"
+	"winefamilies/db"
+	"winefamilies/env"
+
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
 )

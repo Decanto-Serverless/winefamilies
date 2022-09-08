@@ -4,8 +4,9 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/Gprisco/decanto-winefamily-service/services"
-	servHelpers "github.com/Gprisco/decanto-winefamily-service/services/helpers"
+	"winefamilies/services"
+	servHelpers "winefamilies/services/helpers"
+
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )

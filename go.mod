@@ -1,4 +1,4 @@
-module github.com/Gprisco/decanto-winefamily-service
+module winefamilies
 
 go 1.19
 
