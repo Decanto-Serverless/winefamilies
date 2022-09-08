@@ -18,9 +18,9 @@ jobs:
         uses: actions/setup-go@v3
         with:
           go-version: ${{ env.GOLANG_VERSION }}
-      - run: |
-          go mod download
-          go build -o handler main.go
+      	env:
+					GOPROXY: "https://proxy.golang.org,direct"
+      - run: go build -o handler main.go
 
       - name: "Run Azure Functions action"
         uses: Azure/functions-action@v1
